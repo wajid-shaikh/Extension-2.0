@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Assignment Extension",
+  "version": "1.0",
+  "description": "To change the Background Color of the web page and manipulate its DOM",
+  "permissions": ["activeTab"],
+  "action": {
+    // "default_popup": "popup.html",
+    "default_icon": {
+      "16": "fav16.png",
+      "48": "fav32.png",
+      "128": "fav48.png"
+    }
+  },
+  // "background": {
+  //   "service_worker": "background.js"
+  // },
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.co.in/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "fav16.png",
+    "48": "fav32.png",
+    "128": "fav48.png"
+  }
+}
